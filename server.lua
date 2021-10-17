@@ -2,95 +2,16 @@ ESX = nil
 
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
-RegisterNetEvent('faribianchi:rimuovi')
-AddEventHandler('faribianchi:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('faribianchi', 1)
-end)
+------------------------------------------------------------
+----------------------REMOVE-ITEMS--------------------------
+------------------------------------------------------------
 
-RegisterNetEvent('fariblu:rimuovi')
-AddEventHandler('fariblu:rimuovi', function()
+RegisterServerEvent('xenon-headlights:removeitem')
+AddEventHandler('xenon-headlights:removeitem', function(w, h)
     local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('fariblu', 1)
-end)
+    local xPlayer = ESX.GetPlayerFromId(_source)
 
-RegisterNetEvent('faribelettrico:rimuovi')
-AddEventHandler('faribelettrico:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('faribelettrico', 1)
-end)
-
-RegisterNetEvent('farivmenta:rimuovi')
-AddEventHandler('farivmenta:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farivmenta', 1)
-end)
-
-RegisterNetEvent('farivlime:rimuovi')
-AddEventHandler('farivlime:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farivlime', 1)
-end)
-
-RegisterNetEvent('farigiallo:rimuovi')
-AddEventHandler('farigiallo:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farigiallo', 1)
-end)
-
-RegisterNetEvent('farioro:rimuovi')
-AddEventHandler('farioro:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farioro', 1)
-end)
-
-RegisterNetEvent('fariarancione:rimuovi')
-AddEventHandler('fariarancione:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('fariarancione', 1)
-end)
-
-RegisterNetEvent('farirossi:rimuovi')
-AddEventHandler('farirossi:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farirossi', 1)
-end)
-
-RegisterNetEvent('farirosap:rimuovi')
-AddEventHandler('farirosap:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farirosap', 1)
-end)
-
-RegisterNetEvent('farirosa:rimuovi')
-AddEventHandler('farirosa:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farirosa', 1)
-end)
-
-RegisterNetEvent('fariviola:rimuovi')
-AddEventHandler('fariviola:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('fariviola', 1)
-end)
-
-RegisterNetEvent('farinero:rimuovi')
-AddEventHandler('farinero:rimuovi', function()
-    local _source = source
-	local xPlayer = ESX.GetPlayerFromId(_source)
-		xPlayer.removeInventoryItem('farinero', 1)
+    xPlayer.removeInventoryItem(w, h)
 end)
 
 ------------------------------------------------------------
